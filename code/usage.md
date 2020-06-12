@@ -17,7 +17,7 @@ Inside the [umdhmm](../umdhmm/) folder:
 
 Inside the [old_versions](../old_versions/) folder:
 - check that the printing of the models is uncommented in bw-vec-op.c
-- gcc -o run bw-$version.c io.c bw.tested.c tested.h
+- gcc -O2 -mfma -o run bw-vec-op.c io.c bw.tested.c tested.h
 - ./run $seed $hiddenStates $differentObservables $T
 - (cd ../umdhmm && ./esthmm -I model.hmm sequence.seq)
 
